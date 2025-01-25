@@ -12,11 +12,14 @@ public class stackusingLinkedlist {
     public static int size = 0;
     static class stack{
         public static boolean isEmpty(){
-            if(size==0){
-                return true;
-            }else{
-                return false;
-            }
+            //here doen't need to use the size variable 
+            //we can directly define it by the checking the head is null or not ;
+            // if(size==0){
+            //     return true;
+            // }else{
+            //     return false;
+            // }
+           return head==null;
         }
 
         public static void push(int data){
