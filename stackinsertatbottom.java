@@ -11,6 +11,16 @@ public class stackinsertatbottom {
         addatbottom(s, n);
         s.push(data);
     }
+    public static void reverseStack(Stack<Integer> s){
+        if(s.isEmpty()){
+            return;
+        }
+
+        int data = s.pop();
+        reverseStack(s);
+        addatbottom(s, data);
+
+    }
     public static void main(String[] args) {
         Stack<Integer> s = new Stack<>();
         s.add(1);
@@ -19,8 +29,7 @@ public class stackinsertatbottom {
         s.add(4);
 
         System.out.println(s);
-        addatbottom(s,5);
-
+        reverseStack(s);
         System.out.println(s);
     }
 }

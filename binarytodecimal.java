@@ -13,6 +13,7 @@ public class binarytodecimal {
             newnum = (int) (newnum+ (rem*Math.pow(2,var)));
             var++;
             n/=10;
+            System.out.println(newnum);
         }
         System.out.println("New num is "+newnum);
     }

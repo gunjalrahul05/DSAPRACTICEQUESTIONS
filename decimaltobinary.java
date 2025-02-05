@@ -12,6 +12,10 @@ public class decimaltobinary {
             binary=binary+(int)(rem*Math.pow(10, p));
             p++;
             n=n/2;
+
+            System.out.println(rem);;
+            System.out.println(binary);
+            System.out.println(n);
         
         }
         System.out.println("decimal number = "+binary);
