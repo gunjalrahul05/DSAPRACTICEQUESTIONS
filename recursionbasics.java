@@ -452,9 +452,11 @@ public class recursionbasics {
 
     public static void main(String[] args) {
 
-        String str = "abcab";
-       int cnt = printSubsequence(str, 0, 4, "",new HashSet());
-       System.out.println(cnt);
+    //     String str = "abcab";
+    //    int cnt = printSubsequence(str, 0, 4, "",new HashSet());
+    //    System.out.println(cnt);
+
+    towerOfHanoi(3, 10, 20, 50);
 
     }
 }

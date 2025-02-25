@@ -1,4 +1,6 @@
-public class LinkedList {
+import java.util.Queue;
+
+public class LinkedList implements Queue {
     public static class Node {
         int data;
         Node next;
