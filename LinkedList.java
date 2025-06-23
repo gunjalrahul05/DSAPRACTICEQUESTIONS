@@ -1,6 +1,5 @@
-import java.util.Queue;
 
-public class LinkedList implements Queue {
+public class LinkedList   {
     public static class Node {
         int data;
         Node next;
@@ -127,7 +126,7 @@ public class LinkedList implements Queue {
         int index = 0;
 
         while (temp != null) {
-            if (temp.data == key) {
+            if(temp.data == key){
                 return index;
             }
             temp = temp.next;

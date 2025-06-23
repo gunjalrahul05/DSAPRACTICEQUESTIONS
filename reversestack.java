@@ -8,7 +8,7 @@ public class reversestack {
 
         while(!q.isEmpty()){
             s.push(q.remove());
-        }
+        }f
 
         while(!s.isEmpty()){
             q.add(s.pop());
