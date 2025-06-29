@@ -1,6 +1,6 @@
 public class deleteNafterM {
     public static void main(String[] args) {
-        LinkedList head = new LinkedList();
+        LinkedList1 head = new LinkedList1();
 
         head.addFirst(1);
         head.addFirst(2);
