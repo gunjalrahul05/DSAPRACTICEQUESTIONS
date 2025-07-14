@@ -48,9 +48,19 @@ public class graphbfs {
 
     }
 
-    public static void graphBfs(ArrayList<Edge> graphs[]){
+    public static void BFS(ArrayList<Edge> graph[]){
+        boolean visited[] = new boolean[graph.length];
+
+        for(int i=0;i<graph.length;i++){
+            if(!visited[i]){
+                graphBfsutil(graph,visited);
+            }
+        }
+
+    }
+
+    public static void graphBfsutil(ArrayList<Edge> graphs[],boolean visited[]){
         Queue<Integer> q = new LinkedList();
-        boolean visited[] = new boolean[graphs.length];
         q.add(0);
 
         while(!q.isEmpty()){
@@ -68,7 +78,16 @@ public class graphbfs {
         }
     }
 
-    public static void dfs(ArrayList<Edge> graph[],int curr,boolean vis[]){
+    public static void dfs(ArrayList<Edge> graph[]){
+        boolean vis[] = new boolean[graph.length];
+
+        for(int i=0;i<vis.length;i++){
+            if(!vis[i]){
+                dfsutil(graph, i, vis);
+            }
+        }
+    }
+    public static void dfsutil(ArrayList<Edge> graph[],int curr,boolean vis[]){
 
         System.out.print(curr+" ");
         vis[curr]=true;
@@ -76,8 +95,7 @@ public class graphbfs {
         for(int i=0;i<graph[curr].size();i++){
             Edge e= graph[curr].get(i);
             if(!vis[e.dest]){
-                dfs(graph, e.dest, vis);
-            }
+                dfsutil(graph, curr, vis);            }
         }
     }
 
