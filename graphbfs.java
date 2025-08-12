@@ -95,7 +95,8 @@ public class graphbfs {
         for(int i=0;i<graph[curr].size();i++){
             Edge e= graph[curr].get(i);
             if(!vis[e.dest]){
-                dfsutil(graph, curr, vis);            }
+                dfsutil(graph, curr, vis);            
+            }
         }
     }
 
